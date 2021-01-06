@@ -5,7 +5,7 @@
 
   --AccentCol: #73648A;
 
-  --CollapseHeader: #1B2432;
+  --CollapseHeader: #475770;
   --CollapseContent: #1F2933;
 
   --ShadowColour: #FFFFFF;
@@ -93,6 +93,7 @@ p {
 
 .Collapsible {
   background-color: var(--CollapseHeader);
+  background-blend-mode: overlay;
   background-position: center;
   color: var(--MainTextCol);
   cursor: pointer;
@@ -111,6 +112,7 @@ p {
   font-size: 12px;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 25px 25px 0px 0px;
+  transition: transform 0.4s ease-out;
 }
 
 .Active, .Collapsible:hover{
@@ -152,11 +154,12 @@ p {
 }
 
 .Collapsible:after {
-  content: '\25BC'; /* Down Arrow Sign*/
-  font-size: 12px;
+  content: "\25BC"; /* Down Arrow Sign*/
+  font-size: 16px;
   color: var(--MainTextCol);
   float: right;
   margin-left: 8px;
+  transform: rotate(0deg);
 }
 
 .Collapsible A{
@@ -177,7 +180,8 @@ p {
 
 
 .active:after {
-  content: "\25B2"; /* Up Arrow Symbol*/
+  /*content: "\25B2";  Up Arrow Symbol*/
+   transform: rotate(180deg);
 }
 
 .Content P{
