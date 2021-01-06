@@ -1,0 +1,205 @@
+
+:root{
+  --MainTextCol: #ff6363;
+  --SubTextCol: #ffbd69;
+
+  --AccentCol: #73648A;
+
+  --CollapseHeader: #1B2432;
+  --CollapseContent: #1F2933;
+
+  --ShadowColour: #FFFFFF;
+
+  --Sector: #453750;
+  --BackgroundCol: #000008;
+}
+
+@-webkit-keyframes MOVE-BG {
+  from {
+    background-position: 0px 0px
+  }
+  to {
+    background-position: 0px 500px
+  }
+}
+
+BODY {
+  background-color: var(--BackgroundCol);
+
+  background-image: url("../Images/Background.png");
+  background-repeat: repeat-y;
+  -webkit-animation-name: MOVE-BG;
+  -webkit-animation-duration: 75s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  height: 100%;
+}
+
+.wrapper {
+  /*width: 100%;*/
+}
+
+/*Button Stuff*/
+.FancyButton{
+  border: 1px solid;
+  border-color: var(--MainTextCol);
+  padding: 10px 20px;
+  font-size:  20px;
+  font-family: "Montserrat";
+  cursor: pointer;
+  margin: 10px;
+  background: none;
+  transition: 0.3s;
+  transition-timing-function: ease-in;
+  position: relative;
+  overflow: hidden;
+
+  color: var(--MainTextCol);
+}
+
+.FancyButton::Before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: var(--MainTextCol);
+  z-index: -1;
+  transition: 0.2s;
+  transition-timing-function: ease-in;
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+.FancyButton:hover::Before{
+  height: 180%;
+}
+
+.FancyButton:hover{
+  color: var(--BackgroundCol);
+}
+
+h1 {
+  color: var(--MainTextCol);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  color: var(--ForgroundCol);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Collapsible {
+  background-color: var(--CollapseHeader);
+  background-position: center;
+  color: var(--MainTextCol);
+  cursor: pointer;
+  padding: 8px;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  display: block;
+  overflow: hidden;
+
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.Active, .Collapsible:hover{
+  background-color: var(--CollapseContent);
+}
+
+.Active, .Collapsible{
+  background-color: var(--CollapseHeader);
+}
+
+.Content {
+  padding-bottom: 8px;
+  overflow: hidden;
+  background-color: var(--CollapseContent);
+  border-radius: 0px 0px 25px 25px;
+  height: 100%;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border: none;
+
+  /*Animation*/
+  max-height: 0;
+  transition: max-height 0.4s ease-out;
+}
+
+.Collapsible H1{
+  text-align: left;
+  padding: 2px;
+  text-shadow: 0px 2px rgba(0,0,0,0.5);
+}
+
+.Collapsible H2{
+  text-align: left;
+  color: var(--SubTextCol);
+  text-shadow: 0px 2px rgba(0,0,0,0.5);
+}
+
+.Collapsible:after {
+  content: '\25BC'; /* Down Arrow Sign*/
+  font-size: 12px;
+  color: var(--MainTextCol);
+  float: right;
+  margin-left: 8px;
+}
+
+.Collapsible A{
+  float: left;
+  text-align: left;
+  opacity: 100%;
+  text-shadow: 0px 2px rgba(0,0,0,0.25);
+}
+
+.Collapsible A:Before{
+  opacity: 100%;
+}
+
+
+.Collapsible A:hover{
+  opacity: 50%;
+}
+
+
+.active:after {
+  content: "\25B2"; /* Up Arrow Symbol*/
+}
+
+.Content P{
+  text-align: left;
+  color: var(--MainTextCol);
+  padding: 8px;
+}
+
+
+#ImageRowList{
+  display: flex;
+  /*justify-content: space-between;*/
+  justify-content: center;
+  height: 140px;
+  width: 80%;
+  margin: 10 auto;
+  display: block;
+}
+
+#ImageRowList IMG{
+  min-width: 300px;
+  max-width: 300px;
+  max-width: 300px;
+  border: 4px solid white;
+}
