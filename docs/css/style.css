@@ -86,9 +86,15 @@ h1 {
 }
 
 p {
-  color: var(--ForgroundCol);
+  color: var(--SubTextCol);
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.Footer {
+  padding: 8px;
+  margin-top: 24px;
+  margin-bottom: 32px;
 }
 
 .Collapsible {
