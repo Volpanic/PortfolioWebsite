@@ -4,4 +4,10 @@
 
 .col-sm6 {
   padding: 0.5rem;
+} 
+
+.pixel {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
 }
