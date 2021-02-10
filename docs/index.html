@@ -1,158 +1,55 @@
-<HTML>
-  <HEAD>
-    <!--Meta Tags -->
-    <META charset="utf-8">
-    <META name="Viewport" content="width=device-width">
-    <META name="description" content="Game Programming Portfolio">
-    <META name="Keywords" content="Games, Video Games, Music, audio, programing, Game development">
-    <META name="author" content="Ryan Lawrence">
-    <!-- End Of Meta Tags -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Volpanic Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    
+    <!-- NAVBAR-->
 
-    <TITLE>Volpanic Studios - Home</TITLE>
+    <nav class = "navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class = "container-fluid">
+       
+        
 
-    <LINK rel = "stylesheet" href = "./css/style.css">
-  </HEAD>
+        <!-- NAVBAR ITEMS-->
+        <form class="container-fluid justify-content-start">
+          <a class="navbar-brand">Volpanic</a>
+          <a class="nav-link active" aria-current="page" href="#">Games</a>
+          <a class="nav-link active" aria-current="page" href="#">Games</a>
+          <a class="nav-link active" aria-current="page" href="#">Games</a>
+        </form>
 
-  <BODY class = "wrapper">
-    <!--START OF GAME ENTRIES-->
-    <H1>Programming/Game Development Portfolio</H1>
-    <!--Project Still, HEADER-->
-    <DIV>
-      <BUTTON type = "button" class = "Collapsible" style = "background-image: url(Images/ProjectStill/Bedroom.png)">
-        <H1>Project Still</H1>
-        <H2>Unity, C#, 3D, Team Work</H2>
-        <A href = "https://github.com/AIESydneyStudents/LucidDreams" target="_blank">
-          <IMG src = "Images/GithubLogo.png" width = "32px" height = "32px"></IMG>
-        </A>
-      </BUTTON class = "GameName">
-      <!--Content-->
-      <DIV class = "Content">
-        <!--Github-->
+      </div>
+    </nav>
 
-          <!--Images-->
-        <DIV id = "ImageRowList">
-          <IMG src = "Images/ProjectStill/LivingRoom.png"></IMG>
-          <IMG src = "Images/ProjectStill/DishWashing.png"></IMG>
-          <IMG src = "Images/ProjectStill/TitleScreen.png"></IMG>
-          <IMG src = "Images/ProjectStill/Bedroom.png"></IMG>
-        </DIV>
-      </DIV>
-  </DIV>
-    <!-- End Of Project Still entry -->
+    <!-- END OF NAVBAR-->
+    <div class = "container">
 
-    <!--Nova, HEADER-->
-    <DIV>
-      <BUTTON type = "button" class = "Collapsible" style = "background-image: url(Images/Nova/NOVA3.png); background-size: 75%;">
-        <H1>NOVA</H1>
-        <H2>Unity, C#, 2D, Solo work, Art, Music</H2>
-        <A href = "https://github.com/Volpanic/Nova" target="_blank">
-          <IMG src = "Images/GithubLogo.png" width = "32px" height = "32px"></IMG>
-        </A>
+      <!--NOVA CARD-->
+      <div class="card" style="width: 18rem;">
+        <img src="Images/Nova/NOVA1.png" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">NOVA</h5>
+          <p class="card-text">Unity, C#, 2D, Solo work, Art, Music.</p>
+          <div class = "container-fluid">
+            <a href="https://volpanic.github.io/Nova/" class="btn btn-primary">Play</a>
+            <a href="https://github.com/Volpanic/Nova" class="btn btn-primary">Github</a>
+         </div>
+        </div>
+      </div>
+      <!--END-->>
+    </div>
 
-        <A href = "https://volpanic.github.io/Nova/" target="_blank">
-          <IMG src = "Images/PlayIcon.png" width = "32px" height = "32px" style = "margin-left: 8px"></IMG>
-        </A>
-
-      </BUTTON class = "GameName">
-      <!--Content-->
-      <DIV class = "Content">
-        <!--Github-->
-
-          <!--Images-->
-        <DIV id = "ImageRowList">
-          <IMG src = "Images/Nova/NOVA1.png"></IMG>
-          <IMG src = "Images/Nova/NOVA2.png"></IMG>
-          <IMG src = "Images/Nova/NOVA3.png"></IMG>
-          <IMG src = "Images/Nova/NOVA4.png"></IMG>
-        </DIV>
-      </DIV>
-    </DIV>
-    <!-- End Of Nova entry -->
-
-    <!-- Schism, HEADER-->
-    <DIV>
-      <BUTTON type = "button" class = "Collapsible" style = "background-image: url(Images/Schism/Schism4.png); background-size: 75%;">
-        <H1>Schism</H1>
-        <H2>Game Maker Studio 2, GML, 2D, Solo work, Art, Music</H2>
-        <A href = "https://volpanic.itch.io/schism" target="_blank">
-          <IMG src = "Images/ItchIoLogo.png" width = "32px" height = "32px"></IMG>
-        </A>
-      </BUTTON class = "GameName">
-      <!--Content-->
-      <DIV class = "Content">
-        <!--Github-->
-
-          <!--Images-->
-        <DIV id = "ImageRowList">
-          <IMG src = "Images/Schism/Schism1.png"></IMG>
-          <IMG src = "Images/Schism/Schism2.png"></IMG>
-          <IMG src = "Images/Schism/Schism3.png"></IMG>
-          <IMG src = "Images/Schism/Schism4.png"></IMG>
-          <IFRAME width = "600" height = "300" src ="https://www.youtube.com/embed/86zn_6Y06GY"></IFRAME>
-        </DIV>
-      </DIV>
-    </DIV>
-    <!-- End Of Schism entry -->
-
-    <!-- FishGame, HEADER-->
-    <DIV>
-      <BUTTON type = "button" class = "Collapsible" style = "background-image: url(Images/FishGame/FishGame2.png); background-size: 90%;">
-        <H1>Fish Game</H1>
-        <H2>C++, Raylib, 2D, Engine Design, AI, Pathfinding, Solo work, Art, Music  </H2>
-        <A href = "https://github.com/Volpanic/AIForGamesAie" target="_blank">
-          <IMG src = "Images/GithubLogo.png" width = "32px" height = "32px"></IMG>
-        </A>
-      </BUTTON class = "GameName">
-      <!--Content-->
-      <DIV class = "Content">
-        <!--Github-->
-
-          <!--Images-->
-        <DIV id = "ImageRowList">
-          <IMG src = "Images/FishGame/FishGame1.png"></IMG>
-          <IMG src = "Images/FishGame/FishGame2.png"></IMG>
-          <IMG src = "Images/FishGame/FishGame3.png"></IMG>
-          <IMG src = "Images/FishGame/FishGame4.png"></IMG>
-        </DIV>
-      </DIV>
-    </DIV>
-    <!-- End Of FishGame entry -->
-
-    <!-- Tank Game, HEADER-->
-    <DIV>
-      <BUTTON type = "button" class = "Collapsible" style = "background-image: url(Images/TankGame/TankGame1.png); background-size: 95%;">
-        <H1>TNK</H1>
-        <H2>C#, Raylib, 2D, Math, Unit testing, Solo work, Art, Music  </H2>
-        <A href = "https://github.com/Volpanic/aieMathsLibrary" target="_blank">
-          <IMG src = "Images/GithubLogo.png" width = "32px" height = "32px"></IMG>
-        </A>
-      </BUTTON class = "GameName">
-      <!--Content-->
-      <DIV class = "Content">
-        <!--Github-->
-
-          <!--Images-->
-        <DIV id = "ImageRowList">
-          <IMG src = "Images/TankGame/TankGame0.png"></IMG>
-          <IMG src = "Images/TankGame/TankGame1.png"></IMG>
-          <IMG src = "Images/TankGame/TankGame2.png"></IMG>
-          <IMG src = "Images/TankGame/TankGame3.png"></IMG>
-        </DIV>
-      </DIV>
-    </DIV>
-    <!-- End Of Tank Game entry -->
-
-    <!-- Footer -->
-    <CENTER class = "Footer">
-
-    <A href = "https://github.com/Volpanic" target="_blank">
-      <IMG src = "Images/GithubLogo.png" width = "32px" height = "32px"></IMG>
-    </A>
-
-    <P>volpanicstudios@gmail.com</P>
-
-  </CENTER>
-
-    <SCRIPT src = "./scripts/main.js"></SCRIPT>
-  </BODY>
-</HTML>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  </body>
+</html>
