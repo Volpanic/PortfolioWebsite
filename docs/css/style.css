@@ -11,3 +11,27 @@
   image-rendering: crisp-edges;
   image-rendering: pixelated;
 }
+
+hr.hr-text {
+  position: relative;
+    border: none;
+    height: 1px;
+    background: #999;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+hr.hr-text::before {
+  content: attr(data-content);
+  display: inline-block;
+  background: #fff;
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: #999;
+  border-radius: 30rem;
+  padding: 0.2rem 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

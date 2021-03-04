@@ -87,18 +87,26 @@ class GameCard {
     }
 }
 
-var cards = [
+var gameCards = [
   new GameCard("Nova","Images/Nova/NOVA1.png","Unity, C#, 2D, Solo work, Art, Music.","https://volpanic.github.io/Nova/","https://github.com/Volpanic/Nova",[1,1,1]),
   new GameCard("Project Still","Images/ProjectStill/Bedroom.png","Unity, C#, 3D, Team Work.",null,"https://github.com/AIESydneyStudents/LucidDreams",[1,1,1]),
-  new GameCard("Schism","Images/Schism/Schism4.png","Game Maker Studio 2, GML, 2D, Solo work, Art, Music, Release.","https://volpanic.itch.io/schism","",[1,1,1]),
+  new GameCard("Schism","Images/Schism/Schism4.png","Game Maker Studio 2, GML, 2D, Solo work, Art, Music, Release.","https://volpanic.itch.io/schism","",[1,1,1])
+];
+
+var techCards = [
   new GameCard("Fish Game","Images/FishGame/FishGame2.png","C++, Raylib, 2D, Engine Design, AI, Pathfinding, Solo work, Art, Music.","https://github.com/Volpanic/AIForGamesAie","",[1,1,1]),
   new GameCard("Tank Game","Images/TankGame/TankGame1.png","C#, Raylib, 2D, Math, Unit testing, Solo work, Art, Music.","https://github.com/Volpanic/aieMathsLibrary","",[1,1,1])
 ];
 
 var container = document.getElementById("game-cards");
-
-for(var i = 0; i < cards.length; i++)
+for(var i = 0; i < gameCards.length; i++)
 {
-  cards[i].DrawCard(container);
+  gameCards[i].DrawCard(container);
+}
+
+var container = document.getElementById("tech-cards");
+for(var i = 0; i < techCards.length; i++)
+{
+  techCards[i].DrawCard(container);
 }
 
