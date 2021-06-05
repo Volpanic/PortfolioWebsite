@@ -7,9 +7,10 @@ class GameCard {
     this.PlayLink = PlayLink;
     this.GithubLink = GithubLink;
     this.Images = Images;
+    this.ReplaceModalImages = this.ReplaceModalImages.bind(this);
   }
 
-    DrawCard(ParentElement) {
+    DrawCard(ParentElement,array,index) {
       
       let base = document.createElement('div');
       base.className = "col-sm6 mx-auto";
@@ -59,7 +60,7 @@ class GameCard {
       {
         let pButton = document.createElement('a'); 
         pButton.href = this.PlayLink;
-        pButton.className = "btn btn-dark";
+        pButton.className = "blob-button";
         pButton.innerText = "Play";
         cardInner.appendChild(pButton);
       }
@@ -69,44 +70,78 @@ class GameCard {
       {
         let gButton = document.createElement('a'); 
         gButton.href = this.GithubLink;
-        gButton.className = "btn btn-dark";
+        gButton.className = "blob-button";
         gButton.innerText = "Github";
         cardInner.appendChild(gButton);
       }
 
-      let mButton = document.createElement('button'); 
-      //mButton.href = GithubLink;
-      mButton.type = "button";
-      mButton.className = "btn btn-dark";
+      let mButton = document.createElement('a'); 
+      mButton.href = "";
+      //mButton.type = "button";
+      mButton.className = "blob-button";
       mButton.innerText = "More Images";
+      mButton.dataset.toggle = "modal";
+      mButton.dataset.target = "#moreImagesModal";
+      mButton.onclick = array[index].ReplaceModalImages;
       cardInner.appendChild(mButton);
 
       ParentElement.appendChild(base);
 
       return;
     }
+
+      ReplaceModalImages(){
+      var modalBox = document.getElementById("carousel-images");
+    
+      //Clear old html code
+      modalBox.innerHTML = "";
+    
+      var i;
+      for(i = 0; i < this.Images.length; i++)
+      {
+        let imageDiv = document.createElement('div');
+    
+        if(i == 0)
+        imageDiv.className = "carousel-item active";
+        else 
+        imageDiv.className = "carousel-item";
+    
+    
+        let image = document.createElement('img');
+        image.src = this.Images[i];       
+        image.className = "d-block w-100";   
+    
+        imageDiv.appendChild(image);
+        modalBox.appendChild(imageDiv);
+    
+      }
+    }
+
 }
 
+
 var gameCards = [
-  new GameCard("Nova","Images/Nova/NOVA1.png","Unity, C#, 2D, Solo work, Art, Music.","https://volpanic.github.io/Nova/","https://github.com/Volpanic/Nova",[1,1,1]),
-  new GameCard("Project Still","Images/ProjectStill/Bedroom.png","Unity, C#, 3D, Team Work.",null,"https://github.com/AIESydneyStudents/LucidDreams",[1,1,1]),
-  new GameCard("Schism","Images/Schism/Schism4.png","Game Maker Studio 2, GML, 2D, Solo work, Art, Music, Release.","https://volpanic.itch.io/schism","",[1,1,1])
+  new GameCard("Nova","Images/Nova/NOVA1.png","Unity, C#, 2D, Solo work, Art, Music.","https://volpanic.github.io/Nova/","https://github.com/Volpanic/Nova",["Images/Nova/NOVA1.png","Images/Nova/NOVA2.png","Images/Nova/NOVA3.png","Images/Nova/NOVA4.png","Images/Nova/NOVA5.png"]),
+  new GameCard("Take a Break","Images/TakeABreak/TakeABreak2.png","Unity, C#, 3D, Solo Work, Shader Graph, Animation Blending.","https://volpanic.github.io/UnityRenderPipelineTest/","https://github.com/Volpanic/UnityRenderPipelineTest",["Images/TakeABreak/TakeABreak1.png","Images/TakeABreak/TakeABreak2.png","Images/TakeABreak/TakeABreak3.png"]),
+  new GameCard("Project Still","Images/ProjectStill/Bedroom.png","Unity, C#, 3D, Team Work.","https://aiesydneystudents.github.io/LucidDreams/","https://github.com/AIESydneyStudents/LucidDreams",["Images/ProjectStill/Bedroom.png","Images/ProjectStill/DishWashing.png","Images/ProjectStill/LivingRoom.png","Images/ProjectStill/TitleScreen.png"]),
+  new GameCard("Schism","Images/Schism/Schism4.png","Game Maker Studio 2, GML, 2D, Solo work, Art, Music, Release.","https://volpanic.itch.io/schism","",["Images/Schism/Schism1.png","Images/Schism/Schism2.png","Images/Schism/Schism3.png","Images/Schism/Schism4.png"])
 ];
 
 var techCards = [
-  new GameCard("Fish Game","Images/FishGame/FishGame2.png","C++, Raylib, 2D, Engine Design, AI, Pathfinding, Solo work, Art, Music.","https://github.com/Volpanic/AIForGamesAie","",[1,1,1]),
-  new GameCard("Tank Game","Images/TankGame/TankGame1.png","C#, Raylib, 2D, Math, Unit testing, Solo work, Art, Music.","https://github.com/Volpanic/aieMathsLibrary","",[1,1,1])
+  new GameCard("Bullet Hell Pattern Generator","Images/PatternGenerator/PatternGen2.png","C# Unity, System Design, 2D, Custom Editors, Solo Work.","https://github.com/Volpanic/BulletHellPatternGenerator","",["Images/PatternGenerator/PatternGen1.png","Images/PatternGenerator/PatternGen2.png","Images/PatternGenerator/PatternGen3.png","Images/PatternGenerator/PatternGen4.png"]),
+  new GameCard("Fish Game","Images/FishGame/FishGame2.png","C++, Raylib, 2D, Engine Design, AI, Pathfinding, Solo work, Art, Music.","https://github.com/Volpanic/AIForGamesAie","",["Images/FishGame/FishGame1.png","Images/FishGame/FishGame2.png","Images/FishGame/FishGame3.png","Images/FishGame/FishGame4.png"]),
+  new GameCard("Tank Game","Images/TankGame/TankGame1.png","C#, Raylib, 2D, Math, Unit testing, Solo work, Art, Music.","https://github.com/Volpanic/aieMathsLibrary","",["Images/TankGame/TankGame0.png","Images/TankGame/TankGame1.png","Images/TankGame/TankGame2.png","Images/TankGame/TankGame3.png"])
 ];
 
 var container = document.getElementById("game-cards");
 for(var i = 0; i < gameCards.length; i++)
 {
-  gameCards[i].DrawCard(container);
+  gameCards[i].DrawCard(container,gameCards,i);
 }
 
 var container = document.getElementById("tech-cards");
 for(var i = 0; i < techCards.length; i++)
 {
-  techCards[i].DrawCard(container);
+  techCards[i].DrawCard(container,techCards,i);
 }
 
