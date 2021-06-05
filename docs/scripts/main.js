@@ -128,9 +128,9 @@ var gameCards = [
 ];
 
 var techCards = [
-  new GameCard("Bullet Hell Pattern Generator","Images/PatternGenerator/PatternGen2.png","C# Unity, System Design, 2D, Custom Editors, Solo Work.","https://github.com/Volpanic/BulletHellPatternGenerator","",["Images/PatternGenerator/PatternGen1.png","Images/PatternGenerator/PatternGen2.png","Images/PatternGenerator/PatternGen3.png","Images/PatternGenerator/PatternGen4.png"]),
-  new GameCard("Fish Game","Images/FishGame/FishGame2.png","C++, Raylib, 2D, Engine Design, AI, Pathfinding, Solo work, Art, Music.","https://github.com/Volpanic/AIForGamesAie","",["Images/FishGame/FishGame1.png","Images/FishGame/FishGame2.png","Images/FishGame/FishGame3.png","Images/FishGame/FishGame4.png"]),
-  new GameCard("Tank Game","Images/TankGame/TankGame1.png","C#, Raylib, 2D, Math, Unit testing, Solo work, Art, Music.","https://github.com/Volpanic/aieMathsLibrary","",["Images/TankGame/TankGame0.png","Images/TankGame/TankGame1.png","Images/TankGame/TankGame2.png","Images/TankGame/TankGame3.png"])
+  new GameCard("Bullet Hell Pattern Generator","Images/PatternGenerator/PatternGen2.png","C# Unity, System Design, 2D, Custom Editors, Solo Work.","","https://github.com/Volpanic/BulletHellPatternGenerator",["Images/PatternGenerator/PatternGen1.png","Images/PatternGenerator/PatternGen2.png","Images/PatternGenerator/PatternGen3.png","Images/PatternGenerator/PatternGen4.png"]),
+  new GameCard("Fish Game","Images/FishGame/FishGame2.png","C++, Raylib, 2D, Engine Design, AI, Pathfinding, Solo work, Art, Music.","","https://github.com/Volpanic/AIForGamesAie",["Images/FishGame/FishGame1.png","Images/FishGame/FishGame2.png","Images/FishGame/FishGame3.png","Images/FishGame/FishGame4.png"]),
+  new GameCard("Tank Game","Images/TankGame/TankGame1.png","C#, Raylib, 2D, Math, Unit testing, Solo work, Art, Music.","","https://github.com/Volpanic/aieMathsLibrary",["Images/TankGame/TankGame0.png","Images/TankGame/TankGame1.png","Images/TankGame/TankGame2.png","Images/TankGame/TankGame3.png"])
 ];
 
 var container = document.getElementById("game-cards");

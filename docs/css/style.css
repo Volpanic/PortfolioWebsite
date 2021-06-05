@@ -127,3 +127,20 @@ body .modal-dialog { /* Width */
   text-decoration: none;
 }
 
+.githubIcon{
+  color: #C44370;
+  text-align: center;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  opacity: 75%;
+}
+
+.githubIcon img:before{
+  opacity: 75%;
+}
+
+
+.githubIcon img:hover{
+  opacity: 25%;
+}
