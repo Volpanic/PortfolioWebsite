@@ -10,7 +10,7 @@ const SideBar = () => {
               <SideBarName text = "Ryan Lawrence"></SideBarName>
             </div>
 
-            <div className = "absolute w-1/4 origin-right inset-y-0 right-0 flex flex-row">
+            <div className = "absolute w-1/8 origin-right inset-y-0 right-0 flex flex-row">
               <SideBarIcon icon={<BsGithub size="28"/>}  link={"https://github.com/Volpanic"}/>
               <SideBarIcon icon={<BsLinkedin size="28"/>} link={"https://www.linkedin.com/in/ryan-lawrence-dev/"} />
               <SideBarIcon icon={<BsYoutube size="28"/>} />
@@ -28,7 +28,7 @@ const SideBarIcon = ({ icon,link = "https://www.youtube.com/", text = 'tooltip ð
 );
 
 const SideBarName = ({text = 'Name'}) => (
-  <div className = "font-semibold flex items-center origin-left ml-4 text-center text-3xl text-white hover:text-purple-500">
+  <div className = "font-mono font-thin flex items-center origin-left ml-4 text-center text-3xl text-white hover:text-yellow-500">
     {text}
   </div>
 );

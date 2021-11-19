@@ -9,8 +9,8 @@ function App() {
       </div>
 
       <div className = "">
-        <div className="absolute top-24 flex-wrap flex gap-4 origin-center place-items-center w-11/12">
-            <Project projectTitle={"Schism"} images = {["https://volpanic.github.io/PortfolioWebsite/Images/Schism/Schism1.png"]}/>
+        <div className="absolute top-24 flex-wrap flex justify-center gap-4 origin-center items-center place-items-center w-full">
+            <Project projectTitle={"Schism"} images = {["https://volpanic.github.io/PortfolioWebsite/Images/Schism/Schism1.png"]} skillsText = {"Deez"}/>
             <Project projectTitle={"Skull"} images = {["https://images.assetsdelivery.com/compings_v2/1stchoice/1stchoice1602/1stchoice160200012.jpg"]} />
             <Project projectTitle={"Skit"} images = {["https://images.assetsdelivery.com/compings_v2/1stchoice/1stchoice1602/1stchoice160200012.jpg"]}/>
         </div>  
