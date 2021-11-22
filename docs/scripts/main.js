@@ -36,7 +36,7 @@ class GameCard {
       card.appendChild(cardBody);
 
       //Title
-      let cardTitle = document.createElement('h5');
+      let cardTitle = document.createElement('h4');
       cardTitle.className = "card-title";
       cardTitle.innerText = this.GameName;
 
@@ -121,10 +121,10 @@ class GameCard {
 
 
 var gameCards = [
-  new GameCard("Nova","Images/Nova/NOVA1.png","Unity, C#, 2D, Solo work, Art, Music.","https://volpanic.github.io/Nova/","https://github.com/Volpanic/Nova",["Images/Nova/NOVA1.png","Images/Nova/NOVA2.png","Images/Nova/NOVA3.png","Images/Nova/NOVA4.png","Images/Nova/NOVA5.png"]),
+  new GameCard("Schism","Images/Schism/Schism2.png","Game Maker Studio 2, GML, 2D, Solo work, Art, Music, Release.","https://volpanic.itch.io/schism","",["Images/Schism/Schism1.png","Images/Schism/Schism2.png","Images/Schism/Schism3.png","Images/Schism/Schism4.png"]),
   new GameCard("Take a Break","Images/TakeABreak/TakeABreak2.png","Unity, C#, 3D, Solo Work, Shader Graph, Animation Blending.","https://volpanic.github.io/UnityRenderPipelineTest/","https://github.com/Volpanic/UnityRenderPipelineTest",["Images/TakeABreak/TakeABreak1.png","Images/TakeABreak/TakeABreak2.png","Images/TakeABreak/TakeABreak3.png"]),
-  new GameCard("Project Still","Images/ProjectStill/Bedroom.png","Unity, C#, 3D, Team Work.","https://aiesydneystudents.github.io/LucidDreams/","https://github.com/AIESydneyStudents/LucidDreams",["Images/ProjectStill/Bedroom.png","Images/ProjectStill/DishWashing.png","Images/ProjectStill/LivingRoom.png","Images/ProjectStill/TitleScreen.png"]),
-  new GameCard("Schism","Images/Schism/Schism4.png","Game Maker Studio 2, GML, 2D, Solo work, Art, Music, Release.","https://volpanic.itch.io/schism","",["Images/Schism/Schism1.png","Images/Schism/Schism2.png","Images/Schism/Schism3.png","Images/Schism/Schism4.png"])
+  new GameCard("Nova","Images/Nova/NOVA1.png","Unity, C#, 2D, Solo work, Art, Music.","https://volpanic.github.io/Nova/","https://github.com/Volpanic/Nova",["Images/Nova/NOVA1.png","Images/Nova/NOVA2.png","Images/Nova/NOVA3.png","Images/Nova/NOVA4.png","Images/Nova/NOVA5.png"]),
+  new GameCard("Project Still","Images/ProjectStill/Bedroom.png","Unity, C#, 3D, Team Work.","https://aiesydneystudents.github.io/LucidDreams/","https://github.com/AIESydneyStudents/LucidDreams",["Images/ProjectStill/Bedroom.png","Images/ProjectStill/DishWashing.png","Images/ProjectStill/LivingRoom.png","Images/ProjectStill/TitleScreen.png"])
 ];
 
 var techCards = [
