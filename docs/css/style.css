@@ -89,6 +89,7 @@ hr.hr-text::before {
 
 body .modal-dialog { /* Width */
   max-width: 60%;
+  min-width: 60%;
   width: auto !important;
   display: inline-block;
 }
@@ -99,7 +100,6 @@ body .modal-dialog { /* Width */
   justify-content: center;
   align-items: center;
   background: #1e161f8e;
-
 }
 
 .modal-open .modal {
