@@ -22,12 +22,17 @@ class GameCard {
 
       base.append(card);
 
+      let coverImageContainer = document.createElement('div');
+      coverImageContainer.className = "cardCoverImage";
+
+      card.append(coverImageContainer);
+
       //Display the covere image
       let coverImage = document.createElement('img');
       coverImage.src = this.MainImage;
       coverImage.className = "card-img-top";
 
-      card.appendChild(coverImage);
+      coverImageContainer.appendChild(coverImage);
 
       //Card Body
       let cardBody = document.createElement('div');
@@ -46,6 +51,7 @@ class GameCard {
       let cardSkills = document.createElement('p');
       cardSkills.className = "card-text";
       cardSkills.innerText = this.GameSkills;
+      cardSkills.style = "height: 4rem;";
 
       cardBody.appendChild(cardSkills);
       
