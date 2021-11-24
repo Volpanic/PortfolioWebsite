@@ -127,6 +127,7 @@ class GameCard {
 
 
 var gameCards = [
+  new GameCard("Feywild","Images/Feywild/Feywild_1.jpg","Unity, C#, 3D, Group Work, Pathfinding, Agile Developemnt.","","https://github.com/Volpanic/GalaxyBrainGames",["Images/Feywild/Feywild_1.jpg","Images/Feywild/Feywild_2.png","Images/Feywild/Feywild_3.png","Images/Feywild/Feywild_4.png","Images/Feywild/Feywild_5.png"]),
   new GameCard("Schism","Images/Schism/Schism2.png","Game Maker Studio 2, GML, 2D, Solo work, Art, Music, Release.","https://volpanic.itch.io/schism","",["Images/Schism/Schism1.png","Images/Schism/Schism2.png","Images/Schism/Schism3.png","Images/Schism/Schism4.png"]),
   new GameCard("The Pursuit of Slappiness","Images/TPOSlap/TPOSlap1.gif","VR, Unity, C#, 3D, Team Work","https://oneil-k.itch.io/the-pursuit-of-slappiness","https://github.com/JustinKatic/4PLUS1",["Images/TPOSlap/TPOSlap1.gif","Images/TPOSlap/TPOSlap2.png","Images/TPOSlap/TPOSlap3.png","Images/TPOSlap/TPOSlap4.png"]),
   new GameCard("Take a Break","Images/TakeABreak/TakeABreak2.png","Unity, C#, 3D, Solo Work, Shader Graph, Animation Blending.","https://volpanic.github.io/UnityRenderPipelineTest/","https://github.com/Volpanic/UnityRenderPipelineTest",["Images/TakeABreak/TakeABreak1.png","Images/TakeABreak/TakeABreak2.png","Images/TakeABreak/TakeABreak3.png"]),
