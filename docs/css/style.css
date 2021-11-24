@@ -1,7 +1,7 @@
 body{
-  background: linear-gradient(-45deg, #0a0c13, #0e0611, #000000);
+  background: linear-gradient(-45deg, #4a4f61, #0e0611, #000000);
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 30s ease infinite;
 }
 
 @keyframes gradient {
@@ -41,8 +41,8 @@ body{
 
   min-height: 26rem;
 
-  border-color: #e43b44;
-  border: 3px solid #e43b44;
+  border-color: #d81d26;
+  border: 3px solid #d81d26;
   border-radius: 4px;
 
   color: #ffffff;
@@ -67,7 +67,7 @@ hr.hr-text {
   position: relative;
     border: none;
     height: 1px;
-    background: #e43b44;
+    background: #d81d26;
     margin-left: 3rem;
     margin-right: 3rem;
 }
@@ -75,7 +75,7 @@ hr.hr-text {
 hr.hr-text::before {
   content: attr(data-content);
   display: inline-block;
-  background: #e43b44;
+  background: #d81d26;
   font-weight: bold;
   font-size: 0.85rem;
   color: #302631;
@@ -127,9 +127,9 @@ body .modal-dialog { /* Width */
   margin-right: 0.2rem;
 
   line-height: 1;
-  transition: all .5s ease;
+  transition: all .2s ease;
   color: #ffffff;
-  border: 3px solid #e43b44;
+  border: 3px solid #d81d26;
   text-align: center;
   background-color: transparent;
   outline: none;
@@ -138,12 +138,12 @@ body .modal-dialog { /* Width */
 
 .blob-button:hover{
   color: #302631;
-  background-color: #e43b44;
+  background-color: #d81d26;
   text-decoration: none;
 }
 
 .githubIcon{
-  color: #e43b44;
+  color: #d81d26;
   text-align: center;
   padding: 0.5rem;
   display: flex;
