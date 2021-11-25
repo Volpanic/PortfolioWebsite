@@ -15,11 +15,27 @@ body{
   }
 }
 
-.titlebar{
+.titlebar {
+  display: inline-block;
+  width:  100%;
+  padding-top: 1rem;
+}
+
+.titlebarNames {
+  color: #ffffff;
+  text-align: left;
+  justify-content: left;
+  padding-left: 2rem;
+
+  text-shadow: 0px 5px #0000002f;
+}
+
+.titlebarContents{
   color: #ffffff;
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: right;
+  padding-right: 2rem;
 
   text-shadow: 0px 5px #0000002f;
 }
