@@ -13,51 +13,68 @@ class GameCard {
     DrawCard(ParentElement,array,index) {
       
       let base = document.createElement('div');
-      base.className = "col-sm6 mx-auto";
+      base.className = "mx-auto w-75";
+
+      //Card back
+      let cardBack = document.createElement('div');
+      cardBack.className = "card-back text-center mx-auto w-75";
+      cardBack.style = "height: 28rem;";
       
+      base.append(cardBack);
+
       //Start card div
       let card = document.createElement('div');
-      card.className = "card text-center mx-auto";
-      card.style = "width: 24rem;";
+      card.className = "card text-center mx-auto w-100";
+      card.style.backgroundImage = "url(" + this.MainImage + ")";
 
       base.append(card);
 
-      let coverImageContainer = document.createElement('div');
-      coverImageContainer.className = "cardCoverImage";
+      // let coverImageContainer = document.createElement('div');
+      // coverImageContainer.className = "cardCoverImage w-100 h-100";
 
-      card.append(coverImageContainer);
+      // card.append(coverImageContainer);
 
       //Display the covere image
-      let coverImage = document.createElement('img');
-      coverImage.src = this.MainImage;
-      coverImage.className = "card-img-top";
+      // let coverImage = document.createElement('img');
+      // coverImage.src = this.MainImage;
+      // coverImage.className = "card-img-top";
+      // co
 
-      coverImageContainer.appendChild(coverImage);
+      // base.appendChild(coverImage);
 
       //Card Body
       let cardBody = document.createElement('div');
-      cardBody.className = "card-body";
+      cardBody.className = "card-body d-flex flex-column justify-content-between";
       
       card.appendChild(cardBody);
 
       //Title
-      let cardTitle = document.createElement('h4');
-      cardTitle.className = "card-title";
+      let cardTitle = document.createElement('h2');
+      cardTitle.className = "card-title text-left";
       cardTitle.innerText = this.GameName;
 
       cardBody.appendChild(cardTitle);
 
       //Skills
-      let cardSkills = document.createElement('p');
-      cardSkills.className = "card-text";
+      let cardSkills = document.createElement('h5');
+      cardSkills.className = "d-flex card-text justify-content-left opacity-25";
       cardSkills.innerText = this.GameSkills;
       cardSkills.style = "height: 4rem;";
 
-      cardBody.appendChild(cardSkills);
+      cardTitle.appendChild(cardSkills);
+
+
+      // //Skills
+      // let cardSkills = document.createElement('p');
+      // cardSkills.className = "card-text";
+      // cardSkills.innerText = this.GameSkills;
+      // cardSkills.style = "height: 4rem;";
+
+      // cardBody.appendChild(cardSkills);
       
       //Card Inner body, buttons
       let cardInner = document.createElement('div');
-      cardInner.className = "container-fluid";
+      cardInner.className = "d-flex justify-content-end";
 
       cardBody.appendChild(cardInner);
 
