@@ -1,7 +1,8 @@
 
 class GameCard {
-  constructor(GameName,MainImage,GameSkills,PlayLink,GithubLink,Images){
+  constructor(GameName,GameDesc,MainImage,GameSkills,PlayLink,GithubLink,Images){
     this.GameName = GameName;
+    this.GameDesc = GameDesc;
     this.MainImage = MainImage;
     this.GameSkills = GameSkills;
     this.PlayLink = PlayLink;
@@ -85,6 +86,7 @@ class GameCard {
         pButton.href = this.PlayLink;
         pButton.className = "blob-button";
         pButton.innerText = "Play";
+        pButton.target = "_blank";
         cardInner.appendChild(pButton);
       }
 
@@ -95,6 +97,7 @@ class GameCard {
         gButton.href = this.GithubLink;
         gButton.className = "blob-button";
         gButton.innerText = "Github";
+        gButton.target = "_blank";
         cardInner.appendChild(gButton);
       }
 
@@ -107,6 +110,14 @@ class GameCard {
       mButton.dataset.target = "#moreImagesModal";
       mButton.onclick = array[index].ReplaceModalImages;
       cardInner.appendChild(mButton);
+
+      let fButton = document.createElement('h5'); 
+      fButton.href = "";
+      //mButton.type = "button";
+      fButton.className = "card-text justify-content-left opacity-25 ml-auto";
+      fButton.innerText = this.GameDesc;
+      fButton.style = "height: 2rem;";
+      cardInner.appendChild(fButton);
 
       ParentElement.appendChild(base);
 
@@ -144,18 +155,18 @@ class GameCard {
 
 
 var gameCards = [
-  new GameCard("Feywild","Images/Feywild/Feywild_1.jpg","Unity, C#, 3D, Group Work, Pathfinding, Agile Developemnt.","https://oneil-k.itch.io/feywild","https://github.com/Volpanic/GalaxyBrainGames",["Images/Feywild/Feywild_1.jpg","Images/Feywild/Feywild_2.png","Images/Feywild/Feywild_3.png","Images/Feywild/Feywild_4.png","Images/Feywild/Feywild_5.png"]),
-  new GameCard("Schism","Images/Schism/Schism2.png","Game Maker Studio 2, GML, 2D, Solo work, Art, Music, Release.","https://volpanic.itch.io/schism","",["Images/Schism/Schism1.png","Images/Schism/Schism2.png","Images/Schism/Schism3.png","Images/Schism/Schism4.png"]),
-  new GameCard("The Pursuit of Slappiness","Images/TPOSlap/TPOSlap1.gif","VR, Unity, C#, 3D, Team Work","https://oneil-k.itch.io/the-pursuit-of-slappiness","https://github.com/JustinKatic/4PLUS1",["Images/TPOSlap/TPOSlap1.gif","Images/TPOSlap/TPOSlap2.png","Images/TPOSlap/TPOSlap3.png","Images/TPOSlap/TPOSlap4.png"]),
-  new GameCard("Take a Break","Images/TakeABreak/TakeABreak2.png","Unity, C#, 3D, Solo Work, Shader Graph, Animation Blending.","https://volpanic.github.io/UnityRenderPipelineTest/","https://github.com/Volpanic/UnityRenderPipelineTest",["Images/TakeABreak/TakeABreak1.png","Images/TakeABreak/TakeABreak2.png","Images/TakeABreak/TakeABreak3.png"]),
-  new GameCard("Nova","Images/Nova/NOVA1.png","Unity, C#, 2D, Solo work, Art, Music.","https://volpanic.github.io/Nova/","https://github.com/Volpanic/Nova",["Images/Nova/NOVA1.png","Images/Nova/NOVA2.png","Images/Nova/NOVA3.png","Images/Nova/NOVA4.png","Images/Nova/NOVA5.png"]),
-  new GameCard("Project Still","Images/ProjectStill/Bedroom.png","Unity, C#, 3D, Team Work.","https://aiesydneystudents.github.io/LucidDreams/","https://github.com/AIESydneyStudents/LucidDreams",["Images/ProjectStill/Bedroom.png","Images/ProjectStill/DishWashing.png","Images/ProjectStill/LivingRoom.png","Images/ProjectStill/TitleScreen.png"])
+  new GameCard("Feywild","Take control of Ally and her animal companions to solve over 20 unique levels.","Images/Feywild/Feywild_1.jpg","Unity, C#, 3D, Group Work, Pathfinding, Agile Developemnt.","https://oneil-k.itch.io/feywild","https://github.com/Volpanic/GalaxyBrainGames",["Images/Feywild/Feywild_1.jpg","Images/Feywild/Feywild_2.png","Images/Feywild/Feywild_3.png","Images/Feywild/Feywild_4.png","Images/Feywild/Feywild_5.png"]),
+  new GameCard("Schism","Answer a magic distress call.","Images/Schism/Schism2.png","Game Maker Studio 2, GML, 2D, Solo work, Art, Music, Release.","https://volpanic.itch.io/schism","",["Images/Schism/Schism1.png","Images/Schism/Schism2.png","Images/Schism/Schism3.png","Images/Schism/Schism4.png"]),
+  new GameCard("The Pursuit of Slappiness","Take out your frustrations at a carnival.","Images/TPOSlap/TPOSlap2.png","VR, Unity, C#, 3D, Team Work","https://oneil-k.itch.io/the-pursuit-of-slappiness","https://github.com/JustinKatic/4PLUS1",["Images/TPOSlap/TPOSlap1.gif","Images/TPOSlap/TPOSlap2.png","Images/TPOSlap/TPOSlap3.png","Images/TPOSlap/TPOSlap4.png"]),
+  new GameCard("Take a Break","Relax in a simulation.","Images/TakeABreak/TakeABreak2.png","Unity, C#, 3D, Solo Work, Shader Graph, Animation Blending.","https://volpanic.github.io/UnityRenderPipelineTest/","https://github.com/Volpanic/UnityRenderPipelineTest",["Images/TakeABreak/TakeABreak1.png","Images/TakeABreak/TakeABreak2.png","Images/TakeABreak/TakeABreak3.png"]),
+  new GameCard("Nova","","Images/Nova/NOVA1.png","Unity, C#, 2D, Solo work, Art, Music.","https://volpanic.github.io/Nova/","https://github.com/Volpanic/Nova",["Images/Nova/NOVA1.png","Images/Nova/NOVA2.png","Images/Nova/NOVA3.png","Images/Nova/NOVA4.png","Images/Nova/NOVA5.png"]),
+  new GameCard("Project Still","","Images/ProjectStill/Bedroom.png","Unity, C#, 3D, Team Work.","https://aiesydneystudents.github.io/LucidDreams/","https://github.com/AIESydneyStudents/LucidDreams",["Images/ProjectStill/Bedroom.png","Images/ProjectStill/DishWashing.png","Images/ProjectStill/LivingRoom.png","Images/ProjectStill/TitleScreen.png"])
 ];
 
 var techCards = [
-  new GameCard("Bullet Hell Pattern Generator","Images/PatternGenerator/PatternGen2.png","C# Unity, System Design, 2D, Custom Editors, Solo Work.","","https://github.com/Volpanic/BulletHellPatternGenerator",["Images/PatternGenerator/PatternGen1.png","Images/PatternGenerator/PatternGen2.png","Images/PatternGenerator/PatternGen3.png","Images/PatternGenerator/PatternGen4.png"]),
-  new GameCard("Fish Game","Images/FishGame/FishGame2.png","C++, Raylib, 2D, Engine Design, AI, Pathfinding, Solo work, Art, Music.","","https://github.com/Volpanic/AIForGamesAie",["Images/FishGame/FishGame1.png","Images/FishGame/FishGame2.png","Images/FishGame/FishGame3.png","Images/FishGame/FishGame4.png"]),
-  new GameCard("Tank Game","Images/TankGame/TankGame1.png","C#, Raylib, 2D, Math, Unit testing, Solo work, Art, Music.","","https://github.com/Volpanic/aieMathsLibrary",["Images/TankGame/TankGame0.png","Images/TankGame/TankGame1.png","Images/TankGame/TankGame2.png","Images/TankGame/TankGame3.png"])
+  new GameCard("Bullet Hell Pattern Generator","Store bullet patterns in scriptable objects.","Images/PatternGenerator/PatternGen2.png","C# Unity, System Design, 2D, Custom Editors, Solo Work.","","https://github.com/Volpanic/BulletHellPatternGenerator",["Images/PatternGenerator/PatternGen1.png","Images/PatternGenerator/PatternGen2.png","Images/PatternGenerator/PatternGen3.png","Images/PatternGenerator/PatternGen4.png"]),
+  new GameCard("Fish Game","Collect the pearls, Use the editor to make your own!","Images/FishGame/FishGame2.png","C++, Raylib, 2D, Engine Design, AI, Pathfinding, Solo work, Art, Music.","","https://github.com/Volpanic/AIForGamesAie",["Images/FishGame/FishGame1.png","Images/FishGame/FishGame2.png","Images/FishGame/FishGame3.png","Images/FishGame/FishGame4.png"]),
+  new GameCard("Tank Game","Dodge bullets and shoot the boss.","Images/TankGame/TankGame1.png","C#, Raylib, 2D, Math, Unit testing, Solo work, Art, Music.","","https://github.com/Volpanic/aieMathsLibrary",["Images/TankGame/TankGame0.png","Images/TankGame/TankGame1.png","Images/TankGame/TankGame2.png","Images/TankGame/TankGame3.png"])
 ];
 
 var container = document.getElementById("game-cards");
