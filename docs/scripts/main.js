@@ -178,7 +178,7 @@ class GameCard {
 
 
 var gameCards = [
-  new GameCard("Greenhouse: Schism","Complete Solo Project (Code,Art and Music) Released on Steam","Videos/GreenhouseSchism.webm","Unity, C#, 3D, Group Work, Pathfinding, Agile Developemnt.","https://store.steampowered.com/app/3496980/Greenhouse_Schism/","",[]),
+  new GameCard("Greenhouse: Schism","Complete Solo Project (Code,Art and Music) Released on Steam","Videos/GreenhouseSchism.webm","GameMaker, 2D, GML, Commercially Released, Art, Music","https://store.steampowered.com/app/3496980/Greenhouse_Schism/","",[]),
   new GameCard("Feywild","Comprehensive pathfinding system, Sole Programmer","Images/Feywild/Feywild_1.jpg","Unity, C#, 3D, Group Work, Pathfinding, Agile Developemnt.","https://oneil-k.itch.io/feywild","https://github.com/Volpanic/GalaxyBrainGames",["Images/Feywild/Feywild_1.jpg","Images/Feywild/Feywild_2.png","Images/Feywild/Feywild_3.png","Images/Feywild/Feywild_4.png","Images/Feywild/Feywild_5.png"]),
   new GameCard("Schism","Short Game Made in a Month (Code,Art and Music)","Images/Schism/Schism2.png","Game Maker Studio 2, GML, 2D, Solo work, Art, Music, Release.","https://volpanic.itch.io/schism","",["Images/Schism/Schism1.png","Images/Schism/Schism2.png","Images/Schism/Schism3.png","Images/Schism/Schism4.png"]),
   new GameCard("The Pursuit of Slappiness","VR Game with slap detection","Images/TPOSlap/TPOSlap2.png","VR, Unity, C#, 3D, Team Work","https://oneil-k.itch.io/the-pursuit-of-slappiness","https://github.com/JustinKatic/4PLUS1",["Images/TPOSlap/TPOSlap1.gif","Images/TPOSlap/TPOSlap2.png","Images/TPOSlap/TPOSlap3.png","Images/TPOSlap/TPOSlap4.png"]),
