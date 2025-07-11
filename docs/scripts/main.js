@@ -14,11 +14,11 @@ class GameCard {
     DrawCard(ParentElement,array,index) {
       
       let base = document.createElement('div');
-      base.className = "mx-auto w-75";
+      base.className = "base mx-auto w-75";
 
       //Card back
       let cardBack = document.createElement('div');
-      cardBack.className = "card-back text-center mx-auto w-75";
+      cardBack.className = "card-back text-center mx-auto w-100";
       cardBack.style = "height: 28rem;";
       
       base.append(cardBack);
@@ -26,8 +26,27 @@ class GameCard {
       //Start card div
       let card = document.createElement('div');
       card.className = "card text-center mx-auto w-100";
-      card.style.backgroundImage = "url(" + this.MainImage + ")";
 
+      if(this.MainImage.slice(-4) == 'webm')
+      {
+        let video = document.createElement('video');
+        video.className = 'video';
+        video.autoplay = true;
+        video.muted = true;
+        video.loop = true;
+
+        let source = document.createElement('source');
+        source.type = "video/webm"
+        source.src = this.MainImage ;
+
+        video.appendChild(source);
+        card.appendChild(video);
+      }
+      else
+      {
+        card.style.backgroundImage = "url(" + this.MainImage + ")";
+
+      }
       base.append(card);
 
       // let coverImageContainer = document.createElement('div');
@@ -88,6 +107,7 @@ class GameCard {
         pButton.innerText = "Play";
         pButton.target = "_blank";
         cardInner.appendChild(pButton);
+        if(this.PlayLink.includes("https://store.steampowered")) pButton.innerText = "Store Page";
       }
 
       //GithubButton
@@ -101,15 +121,18 @@ class GameCard {
         cardInner.appendChild(gButton);
       }
 
-      let mButton = document.createElement('a'); 
-      mButton.href = "";
-      //mButton.type = "button";
-      mButton.className = "blob-button";
-      mButton.innerText = "More Images";
-      mButton.dataset.toggle = "modal";
-      mButton.dataset.target = "#moreImagesModal";
-      mButton.onclick = array[index].ReplaceModalImages;
-      cardInner.appendChild(mButton);
+      if(this.Images.length > 0)
+      {
+        let mButton = document.createElement('a'); 
+        mButton.href = "";
+        //mButton.type = "button";
+        mButton.className = "blob-button";
+        mButton.innerText = "More Images";
+        mButton.dataset.toggle = "modal";
+        mButton.dataset.target = "#moreImagesModal";
+        mButton.onclick = array[index].ReplaceModalImages;
+        cardInner.appendChild(mButton);
+      }
 
       let fButton = document.createElement('h5'); 
       fButton.href = "";
@@ -155,11 +178,12 @@ class GameCard {
 
 
 var gameCards = [
-  new GameCard("Feywild","Comprehensive pathfinding system","Images/Feywild/Feywild_1.jpg","Unity, C#, 3D, Group Work, Pathfinding, Agile Developemnt.","https://oneil-k.itch.io/feywild","https://github.com/Volpanic/GalaxyBrainGames",["Images/Feywild/Feywild_1.jpg","Images/Feywild/Feywild_2.png","Images/Feywild/Feywild_3.png","Images/Feywild/Feywild_4.png","Images/Feywild/Feywild_5.png"]),
-  new GameCard("Schism","Made entire game (Programming, art and music) in a month","Images/Schism/Schism2.png","Game Maker Studio 2, GML, 2D, Solo work, Art, Music, Release.","https://volpanic.itch.io/schism","",["Images/Schism/Schism1.png","Images/Schism/Schism2.png","Images/Schism/Schism3.png","Images/Schism/Schism4.png"]),
+  new GameCard("Greenhouse: Schism","Complete Solo Project (Code,Art and Music) Released on Steam","Videos/GreenhouseSchism.webm","Unity, C#, 3D, Group Work, Pathfinding, Agile Developemnt.","https://store.steampowered.com/app/3496980/Greenhouse_Schism/","",[]),
+  new GameCard("Feywild","Comprehensive pathfinding system, Sole Programmer","Images/Feywild/Feywild_1.jpg","Unity, C#, 3D, Group Work, Pathfinding, Agile Developemnt.","https://oneil-k.itch.io/feywild","https://github.com/Volpanic/GalaxyBrainGames",["Images/Feywild/Feywild_1.jpg","Images/Feywild/Feywild_2.png","Images/Feywild/Feywild_3.png","Images/Feywild/Feywild_4.png","Images/Feywild/Feywild_5.png"]),
+  new GameCard("Schism","Short Game Made in a Month (Code,Art and Music)","Images/Schism/Schism2.png","Game Maker Studio 2, GML, 2D, Solo work, Art, Music, Release.","https://volpanic.itch.io/schism","",["Images/Schism/Schism1.png","Images/Schism/Schism2.png","Images/Schism/Schism3.png","Images/Schism/Schism4.png"]),
   new GameCard("The Pursuit of Slappiness","VR Game with slap detection","Images/TPOSlap/TPOSlap2.png","VR, Unity, C#, 3D, Team Work","https://oneil-k.itch.io/the-pursuit-of-slappiness","https://github.com/JustinKatic/4PLUS1",["Images/TPOSlap/TPOSlap1.gif","Images/TPOSlap/TPOSlap2.png","Images/TPOSlap/TPOSlap3.png","Images/TPOSlap/TPOSlap4.png"]),
   new GameCard("Take a Break","Shaders and UI","Images/TakeABreak/TakeABreak2.png","Unity, C#, 3D, Solo Work, Shader Graph, Animation Blending.","https://volpanic.github.io/UnityRenderPipelineTest/","https://github.com/Volpanic/UnityRenderPipelineTest",["Images/TakeABreak/TakeABreak1.png","Images/TakeABreak/TakeABreak2.png","Images/TakeABreak/TakeABreak3.png"]),
-  new GameCard("Nova","Cross platform","Images/Nova/NOVA1.png","Unity, C#, 2D, Solo work, Art, Music.","https://volpanic.github.io/Nova/","https://github.com/Volpanic/Nova",["Images/Nova/NOVA1.png","Images/Nova/NOVA2.png","Images/Nova/NOVA3.png","Images/Nova/NOVA4.png","Images/Nova/NOVA5.png"]),
+  new GameCard("Nova","Cross Platform Development","Images/Nova/NOVA1.png","Unity, C#, 2D, Solo work, Art, Music.","https://volpanic.github.io/Nova/","https://github.com/Volpanic/Nova",["Images/Nova/NOVA1.png","Images/Nova/NOVA2.png","Images/Nova/NOVA3.png","Images/Nova/NOVA4.png","Images/Nova/NOVA5.png"]),
   new GameCard("Project Still","Seemless level looping","Images/ProjectStill/Bedroom.png","Unity, C#, 3D, Team Work.","https://sebastian-biala-learmonth.itch.io/project-still","https://github.com/AIESydneyStudents/LucidDreams",["Images/ProjectStill/Bedroom.png","Images/ProjectStill/DishWashing.png","Images/ProjectStill/LivingRoom.png","Images/ProjectStill/TitleScreen.png"])
 ];
 

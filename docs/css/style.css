@@ -19,8 +19,8 @@ body{
 :root {
   --bg-color: #090b0e;
   --fg-color: #120e13b9;
-  --highlight-1: #d81d45;
-  --highlight-2: #f76622;
+  --highlight-1: #7629a8;
+  --highlight-2: #fb78c8;
 }
 
 .titlebar {
@@ -73,6 +73,22 @@ body{
   background-image: linear-gradient(-45deg,var(--highlight-1),var(--highlight-2),#00000000);
   
 }
+
+.base
+{
+  position: relative;
+  overflow: hidden;
+}
+
+.video
+{
+  position: absolute;
+  z-index: -2;
+  top: -100%;
+  left: -25%;
+  mix-blend-mode: multiply;
+}
+
 
 .card  {
   background-color: var(--fg-color);
